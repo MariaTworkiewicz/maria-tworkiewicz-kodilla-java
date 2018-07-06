@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.testing.shape.ShapeCollectorTestSuite" tests="6" skipped="0" failures="0" errors="0" timestamp="2018-07-06T19:34:34" hostname="Marysia" time="0.01">
+  <properties/>
+  <testcase name="testGetNonExistingFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.002"/>
+  <testcase name="testShowFigures" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.003"/>
+  <testcase name="testRemoveNonExistingFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.001"/>
+  <testcase name="testRemoveFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.0"/>
+  <testcase name="testAddFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.001"/>
+  <testcase name="testGetFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.001"/>
+  <system-out><![CDATA[Test Case: begin
+required shape does not exist
+Test Case: end
+Test Case: begin
+com.kodilla.testing.shape.Triangle@5b20000
+com.kodilla.testing.shape.Square@40370000
+com.kodilla.testing.shape.Circle@40280000
+Test Case: end
+Test Case: begin
+Test Case: end
+Test Case: begin
+Test Case: end
+Test Case: begin
+Test Case: end
+Test Case: begin
+Test Case: end
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,12 +1,36 @@
 package com.kodilla.testing.forum.statistics;
 
 public class ForumStatistics {
-    int userQuantity;
-    int postsQuantity;
-    int commentsQuantity;
-    double avgPostsPerUser;
-    double avgCommentsPerUser;
-    double avgCommentsPerPost;
+   private int getUserQuantity;
+   private int postsQuantity;
+   private int commentsQuantity;
+   private double avgPostsPerUser;
+   private double avgCommentsPerUser;
+  private double avgCommentsPerPost;
+
+    public int getUserQuantity() {
+        return getUserQuantity;
+    }
+
+    public int getPostsQuantity() {
+        return postsQuantity;
+    }
+
+    public int getCommentsQuantity() {
+        return commentsQuantity;
+    }
+
+    public double getAvgPostsPerUser() {
+        return avgPostsPerUser;
+    }
+
+    public double getAvgCommentsPerUser() {
+        return avgCommentsPerUser;
+    }
+
+    public double getAvgCommentsPerPost() {
+        return avgCommentsPerPost;
+    }
 
     Statistics statistics;
 
@@ -15,13 +39,13 @@ public class ForumStatistics {
    }
     public void calculateAdvStatistics(){
 
-       userQuantity = statistics.usersNames().size();
+       getUserQuantity = statistics.usersNames().size();
        postsQuantity = statistics.postsCount();
        commentsQuantity = statistics.commentsCount();
 
-        if(userQuantity != 0) {
-            avgPostsPerUser = (double)postsQuantity / userQuantity;
-            avgCommentsPerUser = (double)commentsQuantity / userQuantity;
+        if(getUserQuantity != 0) {
+            avgPostsPerUser = (double)postsQuantity / getUserQuantity;
+            avgCommentsPerUser = (double)commentsQuantity / getUserQuantity;
         }
         if(postsQuantity != 0){
             avgCommentsPerPost =(double) commentsQuantity / postsQuantity;
@@ -29,7 +53,7 @@ public class ForumStatistics {
     }
 
     public void showStatistics(){
-    System.out.println("Number of users: " + userQuantity);
+    System.out.println("Number of users: " + getUserQuantity);
     System.out.println("Number of posts: " + postsQuantity);
     System.out.println("Number of comments: " + commentsQuantity);
     System.out.println("Average number of comments per user: " + avgCommentsPerUser);
