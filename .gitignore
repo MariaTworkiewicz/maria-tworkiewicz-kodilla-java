@@ -1,5 +1,6 @@
 .gradle
 /build/
+/out/
 !gradle/wrapper/gradle-wrapper.jar
 
 ### STS ###
@@ -25,3 +26,7 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+
+kodilla-testing/build
+
+/out/
