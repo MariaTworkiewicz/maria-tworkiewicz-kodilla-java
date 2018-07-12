@@ -49,16 +49,5 @@ public class WorldTestSuite {
         //Then
         BigDecimal expectedPopulation = new BigDecimal("8060261530221664734376");
         Assert.assertEquals(expectedPopulation, totalPopulation);
-
-
-
-
-
-
-
-
-
-
-
     }
 }
