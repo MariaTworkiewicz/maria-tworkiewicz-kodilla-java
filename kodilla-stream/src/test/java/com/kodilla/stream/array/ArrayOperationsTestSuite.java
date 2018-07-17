@@ -1,5 +1,6 @@
 package com.kodilla.stream.array;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.OptionalDouble;
@@ -20,5 +21,7 @@ public class ArrayOperationsTestSuite {
         double newAverage = getAverage(array);
         System.out.println(newAverage);
 
+        //Then
+        Assert.assertEquals(2.5, newAverage, 0.01);
     }
 }
