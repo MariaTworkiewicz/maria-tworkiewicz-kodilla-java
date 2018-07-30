@@ -8,7 +8,7 @@ public class OrderRequest {
     private Product product;
     private int quantity;
 
-    public OrderRequest(final User user, final LocalDateTime orderDate, final Product product, final int quantity){
+    public OrderRequest(final User user, final LocalDateTime orderDate, final Product product, final int quantity) {
         this.user = user;
         this.orderDate = orderDate;
         this.product = product;
@@ -27,7 +27,7 @@ public class OrderRequest {
         return product;
     }
 
-    public int getQuantity(){
+    public int getQuantity() {
         return quantity;
     }
 }

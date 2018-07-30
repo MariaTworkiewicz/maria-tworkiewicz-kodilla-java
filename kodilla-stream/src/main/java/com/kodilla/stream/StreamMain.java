@@ -49,7 +49,7 @@ public class StreamMain {
         Map<Integer, ForumUser> theForumUserMap = theForum.getForumList().stream()
                 .filter(forumUser -> forumUser.getGender() == 'M')
                 .filter(forumUser -> forumUser.getDateOfBirth().isBefore(LocalDate.now().minusYears(20)))
-                .filter(forumUser -> forumUser.getNumberOfPublishedPosts()>=1)
+                .filter(forumUser -> forumUser.getNumberOfPublishedPosts() >= 1)
                 .collect(Collectors.toMap(ForumUser::getUserId, forumUser -> forumUser));
 
         System.out.println("Number of forum users: " + theForumUserMap.size());
@@ -57,7 +57,6 @@ public class StreamMain {
                 .map(entry -> entry.getKey() + ": " + entry.getValue())
                 .forEach(System.out::println);
     }
-
 
 
 }

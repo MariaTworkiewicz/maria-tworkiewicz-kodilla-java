@@ -11,6 +11,7 @@ public class FlightFinder {
     public FlightFinder() {
         this.airportAvailability = new HashMap<>();
     }
+
     public Map<String, Boolean> getAirportAvailability() {
         airportAvailability.put("San Francisco", true);
         airportAvailability.put("Los Angeles", true);
@@ -35,7 +36,7 @@ public class FlightFinder {
                 .findAny()
                 .map(v -> v.getValue())
                 .orElseThrow(() -> new RouteNotFoundException("Unable to find Arrival Airport: " + flight.getArrivalAirport()));
-        if(canLanding) {
+        if (canLanding) {
             System.out.println("You can fly from " + flight.getDepartureAirport() + " to " + flight.getArrivalAirport());
         } else {
             System.out.print("I'm sorry, you cannot use: " + flight.getArrivalAirport() + " as your destination");

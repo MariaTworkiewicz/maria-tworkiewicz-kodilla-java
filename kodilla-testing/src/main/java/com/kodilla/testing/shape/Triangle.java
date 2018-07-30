@@ -4,7 +4,7 @@ public class Triangle implements Shape {
     private double base;
     private double height;
 
-    public Triangle(double base, double height){
+    public Triangle(double base, double height) {
         this.base = base;
         this.height = height;
     }
@@ -17,7 +17,7 @@ public class Triangle implements Shape {
     @Override
     public double getField() {
         double area;
-        area = (base * height)/2;
+        area = (base * height) / 2;
         return area;
     }
 

@@ -15,9 +15,9 @@ public class ProductOrderProcessor {
         this.orderRepository = orderRepository;
     }
 
-    public OrderDTO process(final OrderRequest orderRequest){
+    public OrderDTO process(final OrderRequest orderRequest) {
         boolean isSold = orderService.order(orderRequest.getUser(), orderRequest.getOrderDate(), orderRequest.getProduct(), orderRequest.getQuantity());
-        if(isSold){
+        if (isSold) {
             informationService.inform(orderRequest.getUser(), orderRequest.getProduct());
             orderRepository.createOrder(orderRequest.getUser(), orderRequest.getProduct(), orderRequest.getOrderDate());
             return new OrderDTO(orderRequest.getUser(), orderRequest.getProduct(), orderRequest.getQuantity(), true);

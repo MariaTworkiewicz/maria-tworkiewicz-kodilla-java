@@ -10,23 +10,23 @@ public class ForumTestSuite {
     private static int testCounter = 0;
 
     @BeforeClass
-    public static void beforeAllTests(){
+    public static void beforeAllTests() {
         System.out.println("This is the beginning of tests.");
     }
 
     @AfterClass
-    public static void afterAllTests(){
+    public static void afterAllTests() {
         System.out.println("All tests are finished");
     }
 
     @Before
-    public void beforeEveryTest(){
+    public void beforeEveryTest() {
         testCounter++;
         System.out.println("Preparing to execute test #" + testCounter);
     }
 
     @Test
-    public void testAddPost(){
+    public void testAddPost() {
         //Given
         ForumUser forumUser = new ForumUser("mrsmith", "John Smith");
 
@@ -38,7 +38,7 @@ public class ForumTestSuite {
     }
 
     @Test
-    public void testAddComment(){
+    public void testAddComment() {
         //Given
         ForumUser forumUser = new ForumUser("mrsmith", "John Smith");
         ForumPost thePost = new ForumPost("Hello everyone, " + "this is my first contribution here!", "nrsmith");
@@ -51,7 +51,7 @@ public class ForumTestSuite {
     }
 
     @Test
-    public void testGetPost(){
+    public void testGetPost() {
         //Given
         ForumUser forumUser = new ForumUser("mrsmith", "John Smith");
         ForumPost thePost = new ForumPost("Hello everyone, " + "this is my first contribution here!", "mrsmith");

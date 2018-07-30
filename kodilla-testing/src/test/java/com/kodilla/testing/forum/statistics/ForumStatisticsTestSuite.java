@@ -17,22 +17,22 @@ public class ForumStatisticsTestSuite {
     private Statistics statisticsMock;
 
 
-
     @Before
-    public void beforeTest(){
+    public void beforeTest() {
 
         statisticsMock = mock(Statistics.class);
         List<String> usersNamesMock = new ArrayList<>();
-        for(int i = 0; i<80; i++) {
+        for (int i = 0; i < 80; i++) {
             usersNamesMock.add("John Smith" + i);
         }
         when(statisticsMock.usersNames()).thenReturn(usersNamesMock);
         when(statisticsMock.postsCount()).thenReturn(25);
         when(statisticsMock.commentsCount()).thenReturn(50);
         forumStatistics = new ForumStatistics(statisticsMock);
-        }
+    }
+
     @After
-    public void afterTest(){
+    public void afterTest() {
         System.out.println("users number: " + forumStatistics.getUserQuantity());
         System.out.println("posts number: " + forumStatistics.getPostsQuantity());
         System.out.println("comments number: " + forumStatistics.getCommentsQuantity());
@@ -41,11 +41,12 @@ public class ForumStatisticsTestSuite {
         System.out.println(" average comments per post " + forumStatistics.getAvgCommentsPerPost());
         System.out.println(" average posts per user " + forumStatistics.getAvgPostsPerUser());
     }
+
     @Test
-    public void testCalculateAdvStatistics100Users(){
+    public void testCalculateAdvStatistics100Users() {
         //Given
         List<String> usersNamesMock = new ArrayList<>();
-        for(int i = 0; i<100; i++) {
+        for (int i = 0; i < 100; i++) {
             usersNamesMock.add("John Smith" + i);
         }
         //When
@@ -60,7 +61,7 @@ public class ForumStatisticsTestSuite {
     }
 
     @Test
-    public void testCalculateAdvStatisticsNoUsers(){
+    public void testCalculateAdvStatisticsNoUsers() {
         //Given
         List<String> usersNamesMock = new ArrayList<>();
         when(statisticsMock.usersNames()).thenReturn(usersNamesMock);
@@ -75,7 +76,7 @@ public class ForumStatisticsTestSuite {
     }
 
     @Test
-    public void testCalculateAdvStatisticsNoPosts(){
+    public void testCalculateAdvStatisticsNoPosts() {
         //Given
         when(statisticsMock.postsCount()).thenReturn(0);
         //When
@@ -88,7 +89,7 @@ public class ForumStatisticsTestSuite {
     }
 
     @Test
-    public void testCalculateAdvStatisticsNoComments(){
+    public void testCalculateAdvStatisticsNoComments() {
         //Given
         when(statisticsMock.commentsCount()).thenReturn(0);
         //When
@@ -101,7 +102,7 @@ public class ForumStatisticsTestSuite {
     }
 
     @Test
-    public void testCalculateAdvStatisticsCommentsLessThenPosts(){
+    public void testCalculateAdvStatisticsCommentsLessThenPosts() {
         //Given
         when(statisticsMock.postsCount()).thenReturn(100);
         when(statisticsMock.commentsCount()).thenReturn(10);
@@ -116,7 +117,7 @@ public class ForumStatisticsTestSuite {
     }
 
     @Test
-    public void testCalculateAdvStatisticsCommentsMoreThenPosts(){
+    public void testCalculateAdvStatisticsCommentsMoreThenPosts() {
         //Given
         when(statisticsMock.postsCount()).thenReturn(100);
         when(statisticsMock.commentsCount()).thenReturn(150);
@@ -129,11 +130,12 @@ public class ForumStatisticsTestSuite {
         Assert.assertEquals(1.25, forumStatistics.getAvgPostsPerUser(), 0.01);
         Assert.assertEquals(1.5, forumStatistics.getAvgCommentsPerPost(), 0.01);
     }
+
     @Test
-    public void testCalculateAdvStatistics1000Posts(){
+    public void testCalculateAdvStatistics1000Posts() {
         //Given
         when(statisticsMock.postsCount()).thenReturn(1000);
-       //When
+        //When
         forumStatistics.calculateAdvStatistics();
         //Then
         Assert.assertEquals(1000, forumStatistics.getPostsQuantity());

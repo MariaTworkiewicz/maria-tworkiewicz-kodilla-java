@@ -5,8 +5,8 @@ public class ExceptionHandling {
         SecondChallenge secondChallenge = new SecondChallenge();
 
         try {
-           String result = secondChallenge.probablyIWillThrowException(3, 5);
-           System.out.println(result);
+            String result = secondChallenge.probablyIWillThrowException(3, 5);
+            System.out.println(result);
         } catch (Exception e) {
             System.out.println("Exception occurred: " + e);
         } finally {

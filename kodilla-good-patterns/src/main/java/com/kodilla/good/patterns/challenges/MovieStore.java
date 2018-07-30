@@ -31,11 +31,10 @@ public class MovieStore {
         MovieStore movieStore = new MovieStore();
         String theResultListOfMovies = movieStore.getMovies().entrySet().stream()
                 .flatMap(entry -> entry.getValue().stream())
-                .map (a -> a.toString())
+                .map(a -> a.toString())
                 .collect(Collectors.joining("!"));
 
         System.out.println(theResultListOfMovies);
-
 
 
     }

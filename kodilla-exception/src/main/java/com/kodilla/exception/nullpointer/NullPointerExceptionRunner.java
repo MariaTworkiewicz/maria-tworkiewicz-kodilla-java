@@ -16,5 +16,5 @@ public class NullPointerExceptionRunner {
         System.out.println("Processing other logic!");
     }
 
-    }
+}
 

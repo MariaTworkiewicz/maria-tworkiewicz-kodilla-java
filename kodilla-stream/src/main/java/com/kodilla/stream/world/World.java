@@ -11,16 +11,16 @@ public class World {
     }
 
 
-    public void addContinent(Continent continent){
+    public void addContinent(Continent continent) {
         world.add(continent);
     }
 
-    public List<Continent> getWorld(){
+    public List<Continent> getWorld() {
         return world;
     }
 
-    public BigDecimal getPeopleQuantity(){
-       return world.stream()
+    public BigDecimal getPeopleQuantity() {
+        return world.stream()
                 .flatMap(region -> region.getContinent().stream())
                 .map(Country::getPeopleQuantity)
                 .reduce(BigDecimal.ZERO, (sum, current) -> sum = sum.add(current));

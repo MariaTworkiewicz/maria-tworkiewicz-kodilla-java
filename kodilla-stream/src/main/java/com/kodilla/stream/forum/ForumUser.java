@@ -16,7 +16,7 @@ public final class ForumUser {
         this.location = location;
     }
 
-    public void addFriend(ForumUser user){
+    public void addFriend(ForumUser user) {
         friends.add(user);
     }
 
@@ -64,13 +64,13 @@ public final class ForumUser {
         return username.hashCode();
     }
 
-    public Set<String> getLocationsOfFriends(){
+    public Set<String> getLocationsOfFriends() {
         return friends.stream()
                 .map(friend -> friend.getLocation())
                 .collect(Collectors.toSet());
     }
 
-    public Set<String> getLocationsOfFriendsOfFriends(){
+    public Set<String> getLocationsOfFriendsOfFriends() {
         return friends.stream()
                 .flatMap(user -> user.getFriends().stream())
                 .filter(user -> user != this)

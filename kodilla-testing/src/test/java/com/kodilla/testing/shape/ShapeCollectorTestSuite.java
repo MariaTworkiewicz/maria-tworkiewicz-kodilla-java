@@ -9,18 +9,19 @@ import java.util.ArrayList;
 
 public class ShapeCollectorTestSuite {
     @Before
-    public void before(){
+    public void before() {
         System.out.println("Test Case: begin");
     }
+
     @After
-    public void after(){
+    public void after() {
         System.out.println("Test Case: end");
     }
 
     @Test
-    public void testAddFigure(){
+    public void testAddFigure() {
         //Given
-    ShapeCollector shapeCollector = new ShapeCollector();
+        ShapeCollector shapeCollector = new ShapeCollector();
 
         //When
         Triangle triangle = new Triangle(12, 5);
@@ -32,12 +33,12 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-    public void testGetFigure(){
+    public void testGetFigure() {
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
 
         //When
-        Triangle triangle = new Triangle(15,8);
+        Triangle triangle = new Triangle(15, 8);
         shapeCollector.addFigure(triangle);
 
         //then
@@ -46,12 +47,12 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-    public void testGetNonExistingFigure(){
+    public void testGetNonExistingFigure() {
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
 
         //When
-        Triangle triangle = new Triangle(15,8);
+        Triangle triangle = new Triangle(15, 8);
 
 
         //then
@@ -60,12 +61,12 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-    public void testRemoveFigure(){
+    public void testRemoveFigure() {
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
 
         //When
-        Triangle triangle = new Triangle(15,8);
+        Triangle triangle = new Triangle(15, 8);
         shapeCollector.addFigure(triangle);
         boolean result = shapeCollector.removeFigure(triangle);
 
@@ -75,7 +76,7 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-    public void testRemoveNonExistingFigure(){
+    public void testRemoveNonExistingFigure() {
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
 
@@ -89,13 +90,13 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-    public void testShowFigures(){
+    public void testShowFigures() {
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        Triangle triangle = new Triangle(15,8);
+        Triangle triangle = new Triangle(15, 8);
         Square square = new Square(23);
         Circle circle = new Circle(12);
-        ArrayList<Shape> shapeList= new ArrayList<Shape>();
+        ArrayList<Shape> shapeList = new ArrayList<Shape>();
         ArrayList<Shape> shapeResult;
         //When
         shapeCollector.addFigure(triangle);
@@ -111,7 +112,7 @@ public class ShapeCollectorTestSuite {
         //then
         Assert.assertEquals(shapeList.toString(), shapeResult.toString());
 
-        }
-
     }
+
+}
 

@@ -2,16 +2,17 @@ package com.kodilla.stream.world;
 
 import org.junit.Assert;
 import org.junit.Test;
+
 import java.math.BigDecimal;
 
 public class WorldTestSuite {
     @Test
-    public void testGetPeopleQuantity(){
+    public void testGetPeopleQuantity() {
         //Given
         //Countries
-        Country poland =new Country("Poland", new BigDecimal("79785435430339948574"));
-        Country russia =new Country("Russia", new BigDecimal ("7548450854736544444"));
-        Country germany =new Country("Germany", new BigDecimal("5749372584037584484"));
+        Country poland = new Country("Poland", new BigDecimal("79785435430339948574"));
+        Country russia = new Country("Russia", new BigDecimal("7548450854736544444"));
+        Country germany = new Country("Germany", new BigDecimal("5749372584037584484"));
 
         Country india = new Country("India", new BigDecimal("58437584375894378544"));
         Country pakistan = new Country("Pakistan", new BigDecimal("66435435488978978"));

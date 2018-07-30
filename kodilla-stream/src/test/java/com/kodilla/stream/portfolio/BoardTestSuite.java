@@ -2,6 +2,7 @@ package com.kodilla.stream.portfolio;
 
 import org.junit.Assert;
 import org.junit.Test;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -141,7 +142,7 @@ public class BoardTestSuite {
     }
 
     @Test
-    public void testAddTaskListAverageWorkingOnTask(){
+    public void testAddTaskListAverageWorkingOnTask() {
         //Given
         Board project = prepareTestData();
         //When
@@ -151,12 +152,12 @@ public class BoardTestSuite {
                 .filter(inProgressTasks::contains)
                 .flatMap(t1 -> t1.getTasks().stream())
                 .map(Task::getCreated)
-                .map(a ->DAYS.between(a, LocalDate.now()))
+                .map(a -> DAYS.between(a, LocalDate.now()))
                 .mapToDouble(a -> a.doubleValue())
                 .average().getAsDouble();
 
         System.out.println(avgDaysNumber);
         //Then
-        Assert.assertEquals(10.0, avgDaysNumber,0.01);
+        Assert.assertEquals(10.0, avgDaysNumber, 0.01);
     }
 }

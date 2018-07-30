@@ -8,7 +8,7 @@ public class OrderDTO {
 
     public OrderDTO(User user, Product product, int quantity, boolean isSold) {
         this.user = user;
-        this.product =product;
+        this.product = product;
         this.quantity = quantity;
         this.isSold = isSold;
     }
@@ -17,7 +17,7 @@ public class OrderDTO {
         return user;
     }
 
-    public Product getProduct(){
+    public Product getProduct() {
         return product;
     }
 

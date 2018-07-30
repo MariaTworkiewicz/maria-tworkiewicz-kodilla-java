@@ -5,7 +5,7 @@ public class User {
     private String userFirstName;
     private String userLastName;
 
-    public User(String userId, String userFirstName, String userLastName){
+    public User(String userId, String userFirstName, String userLastName) {
         this.userId = userId;
         this.userFirstName = userFirstName;
         this.userLastName = userLastName;

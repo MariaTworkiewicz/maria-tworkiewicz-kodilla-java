@@ -9,7 +9,7 @@ import static com.kodilla.stream.array.ArrayOperations.getAverage;
 
 public class ArrayOperationsTestSuite {
     @Test
-    public void testGetAverage(){
+    public void testGetAverage() {
         //Given
         int[] array = new int[4];
         array[0] = 1;
