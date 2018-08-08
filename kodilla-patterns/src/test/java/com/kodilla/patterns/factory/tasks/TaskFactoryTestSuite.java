@@ -27,7 +27,7 @@ public class TaskFactoryTestSuite {
         boolean before = paintingTask.isTaskExecuted();
         paintingTask.executeTask();
         //then
-        Assert.assertEquals("Family room painting", paintingTask.getTaskName());
+        Assert.assertEquals("Family room' painting", paintingTask.getTaskName());
         Assert.assertFalse(before);
         Assert.assertTrue(paintingTask.isTaskExecuted());
 

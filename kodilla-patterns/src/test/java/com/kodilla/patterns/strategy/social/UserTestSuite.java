@@ -13,14 +13,11 @@ public class UserTestSuite {
 
         //When
         String aniaSocialMedium = ania.sharePost();
-        System.out.println("Ania will post on " + aniaSocialMedium );
         String beataSocialMedium = beata.sharePost();
-        System.out.println("Beata will post on " + beataSocialMedium );
         String matyldaSocialMedium = matylda.sharePost();
-        System.out.println("Matylda will post on " + matyldaSocialMedium );
 
         //Then
-        Assert.assertEquals("Facebook", aniaSocialMedium);
+        Assert.assertEquals("Fejsbuk", aniaSocialMedium);
         Assert.assertEquals("Snapchat", beataSocialMedium);
         Assert.assertEquals("Twitter", matyldaSocialMedium);
     }
@@ -31,10 +28,8 @@ public class UserTestSuite {
         User piotrusPan = new Millenials("Piotrus Pan");
         //When
         String piotrusSocialMedium = piotrusPan.sharePost();
-        System.out.println("Piotrus Pan originally uses " + piotrusSocialMedium + " to share his posts");
         piotrusPan.setSharingStrategy(new TwitterPublisher());
         piotrusSocialMedium = piotrusPan.sharePost();
-        System.out.println("Piotrus Pan just started with " +piotrusSocialMedium + " to share his thoughts");
         //Then
         Assert.assertEquals("Twitter", piotrusSocialMedium);
 
