@@ -19,14 +19,14 @@ public class Ingredients {
                 || ingredients.equals(CHILI_PEPPERS)
                 || ingredients.equals(MUSHROOMS)
                 || ingredients.equals(SHRIMP)
-                || ingredients.equals(CHEESE)){
+                || ingredients.equals(CHEESE)) {
             this.ingredients = ingredients;
         } else {
             throw new IllegalStateException("Please select one of the allowed ingredients");
         }
     }
 
-    public String getIngredients(){
+    public String getIngredients() {
         return ingredients;
     }
 

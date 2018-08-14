@@ -13,7 +13,7 @@ public class Bun {
         }
     }
 
-    public String getBun(){
+    public String getBun() {
         return bun;
     }
 

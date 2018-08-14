@@ -12,17 +12,17 @@ public class BoardConfig {
     Board board;
 
     @Bean(name = "toDoList")
-    public TaskList getToDoTaskList(){
+    public TaskList getToDoTaskList() {
         return new TaskList();
     }
 
     @Bean(name = "inProgressList")
-    public TaskList getinProgressTaskList(){
+    public TaskList getinProgressTaskList() {
         return new TaskList();
     }
 
     @Bean(name = "DoneList")
-    public TaskList getDoneTaskList(){
+    public TaskList getDoneTaskList() {
         return new TaskList();
     }
 

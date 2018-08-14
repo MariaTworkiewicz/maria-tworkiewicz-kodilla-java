@@ -16,10 +16,10 @@ public class BigmacTestSuite {
                 .ingredients(new Ingredients("ONION"))
                 .ingredients(new Ingredients("BACON"))
                 .ingredients(new Ingredients("MUSHROOMS"))
-                .ingredients(new Ingredients ("SHRIMP"))
+                .ingredients(new Ingredients("SHRIMP"))
                 .sauce(new Sauce("STANDARD"))
                 .build();
-       //System.out.println(bigmac);
+        //System.out.println(bigmac);
         //When
         int howManyIngredients = bigmac.getIngredients().size();
         int howManyBurgers = bigmac.getBurgers();

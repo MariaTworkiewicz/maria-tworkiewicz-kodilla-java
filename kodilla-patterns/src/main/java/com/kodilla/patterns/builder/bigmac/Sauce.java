@@ -14,12 +14,12 @@ public class Sauce {
         }
     }
 
-    public String getSauce(){
+    public String getSauce() {
         return sauce;
     }
 
     @Override
     public String toString() {
-        return  sauce;
+        return sauce;
     }
 }

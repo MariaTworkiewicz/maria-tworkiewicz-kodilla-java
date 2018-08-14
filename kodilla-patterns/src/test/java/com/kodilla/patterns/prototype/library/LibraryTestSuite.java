@@ -2,16 +2,17 @@ package com.kodilla.patterns.prototype.library;
 
 import org.junit.Assert;
 import org.junit.Test;
+
 import java.time.LocalDate;
 
 
 public class LibraryTestSuite {
     @Test
-    public void testGetBooks(){
+    public void testGetBooks() {
         //Given
-        Book book1 = new Book("Little Prince", "Exupery", LocalDate.of(2015,04,05));
-        Book book2 = new Book("Alice in Wonderland", " Lewis Carroll", LocalDate.of(2013,05,9));
-        Book book3 = new Book("Amelia Bedelia", "Herman Parish", LocalDate.of(2012,05,15));
+        Book book1 = new Book("Little Prince", "Exupery", LocalDate.of(2015, 04, 05));
+        Book book2 = new Book("Alice in Wonderland", " Lewis Carroll", LocalDate.of(2013, 05, 9));
+        Book book3 = new Book("Amelia Bedelia", "Herman Parish", LocalDate.of(2012, 05, 15));
 
         Library library = new Library("Flower Mound Library");
         library.getBooks().add(book1);
@@ -20,19 +21,19 @@ public class LibraryTestSuite {
 
         //making shallow copy
         Library library2 = null;
-        try{
+        try {
             library2 = library.shallowCopy();
             library2.setName("Roanoke Library");
-        } catch (CloneNotSupportedException e){
+        } catch (CloneNotSupportedException e) {
             System.out.println(e);
         }
 
         //making deep copy
         Library library3 = null;
-        try{
+        try {
             library3 = library.deepCopy();
             library3.setName("Argyle Library");
-        } catch (CloneNotSupportedException e){
+        } catch (CloneNotSupportedException e) {
             System.out.println(e);
         }
 
@@ -51,7 +52,6 @@ public class LibraryTestSuite {
         Assert.assertEquals(2, library.getBooks().size());
         Assert.assertEquals(2, library2.getBooks().size());
         Assert.assertEquals(3, library3.getBooks().size());
-
 
 
     }

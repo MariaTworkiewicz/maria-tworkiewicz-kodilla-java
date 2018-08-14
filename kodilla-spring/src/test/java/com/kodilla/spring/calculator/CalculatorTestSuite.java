@@ -14,46 +14,46 @@ public class CalculatorTestSuite {
 
 
     @Test
-    public void testAddCalculations(){
+    public void testAddCalculations() {
         //Given
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
         Calculator calculator = context.getBean(Calculator.class);
         //When
         double result = calculator.add(14, 18);
         //Then
-        Assert.assertEquals(32, result, 0.01 );
+        Assert.assertEquals(32, result, 0.01);
     }
 
     @Test
-    public void testSubtractCalculations(){
+    public void testSubtractCalculations() {
         //Given
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
         Calculator calculator = context.getBean(Calculator.class);
         //When
         double result = calculator.sub(18, 5);
         //Then
-        Assert.assertEquals(13, result, 0.01 );
+        Assert.assertEquals(13, result, 0.01);
     }
 
     @Test
-    public void testMultiplicationCalculations(){
+    public void testMultiplicationCalculations() {
         //Given
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
         Calculator calculator = context.getBean(Calculator.class);
         //When
         double result = calculator.mul(14, 18);
         //Then
-        Assert.assertEquals(252, result, 0.01 );
+        Assert.assertEquals(252, result, 0.01);
     }
 
     @Test
-    public void testDivisionCalculations(){
+    public void testDivisionCalculations() {
         //Given
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
         Calculator calculator = context.getBean(Calculator.class);
         //When
         double result = calculator.div(30, 10);
         //Then
-        Assert.assertEquals(3, result, 0.01 );
+        Assert.assertEquals(3, result, 0.01);
     }
 }

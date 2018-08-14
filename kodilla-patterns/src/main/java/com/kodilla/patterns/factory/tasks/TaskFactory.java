@@ -8,7 +8,7 @@ public class TaskFactory {
     public final Task makeTask(final String taskClass) {
         switch (taskClass) {
             case DRIVING:
-                return new DrivingTask("Weekend trip","San Antonio", "car");
+                return new DrivingTask("Weekend trip", "San Antonio", "car");
             case PAINTING:
                 return new PaintingTask("Family room' painting", "pink", "family room");
             case SHOPPING:
