@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.patterns.prototype.library.LibraryTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-08-14T15:19:43" hostname="Marysia" time="0.017">
+  <properties/>
+  <testcase name="testGetBooks" classname="com.kodilla.patterns.prototype.library.LibraryTestSuite" time="0.017"/>
+  <system-out><![CDATA[Book{title='Alice in Wonderland', author=' Lewis Carroll', publicationDate=2013-05-09}
+Book{title='Little Prince', author='Exupery', publicationDate=2015-04-05}
+Book{title='Alice in Wonderland', author=' Lewis Carroll', publicationDate=2013-05-09}
+Book{title='Little Prince', author='Exupery', publicationDate=2015-04-05}
+Book{title='Alice in Wonderland', author=' Lewis Carroll', publicationDate=2013-05-09}
+Book{title='Amelia Bedelia', author='Herman Parish', publicationDate=2012-05-15}
+Book{title='Little Prince', author='Exupery', publicationDate=2015-04-05}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
