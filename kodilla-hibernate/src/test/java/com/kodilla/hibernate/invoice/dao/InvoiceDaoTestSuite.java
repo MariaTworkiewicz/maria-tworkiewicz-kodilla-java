@@ -11,6 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
@@ -32,38 +33,35 @@ public class InvoiceDaoTestSuite {
         Item item4 = new Item(granola, new BigDecimal(6), 2);
 
         Invoice invoice1 = new Invoice("2018_1");
-        //Invoice invoice2 = new Invoice("2018_2");
+        Invoice invoice2 = new Invoice("2018_2");
         invoice1.getItems().add(item1);
         invoice1.getItems().add(item3);
-        //invoice2.getItems().add(item2);
-        //invoice2.getItems().add(item4);
+        invoice2.getItems().add(item2);
+        invoice2.getItems().add(item4);
 
         item1.setInvoice(invoice1);
         item3.setInvoice(invoice1);
-        //item2.setInvoice(invoice2);
-        //item4.setInvoice(invoice2);
+        item2.setInvoice(invoice2);
+        item4.setInvoice(invoice2);
 
 
         //When
-        invoiceDao.save(invoice1);
+        //invoiceDao.save(invoice1);
+        invoiceDao.save(Arrays.asList(invoice1, invoice2));
         int invoice1Id = invoice1.getId();
        // invoiceDao.save(invoice2);
-        //int invoice2Id = invoice2.getId();
+        int invoice2Id = invoice2.getId();
         //Then
         Assert.assertNotEquals(0, invoice1Id);
-       // Assert.assertNotEquals(0, invoice2Id);
+        Assert.assertNotEquals(0, invoice2Id);
 
         //cleanup
-        try {
+          try {
             invoiceDao.delete(invoice1Id);
-            //invoiceDao.delete(invoice2Id);
+            invoiceDao.delete(invoice2Id);
 
         } catch (Exception e) {
             //do nothing
         }
-
-
-
-
     }
 }
