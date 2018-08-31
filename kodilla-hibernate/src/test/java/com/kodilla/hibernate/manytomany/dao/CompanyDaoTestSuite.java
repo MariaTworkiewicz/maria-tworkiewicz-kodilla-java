@@ -65,6 +65,7 @@ public class CompanyDaoTestSuite {
         }
     }
 
+
     @Test
     public void testNamedQueries(){
         //Given
@@ -118,13 +119,13 @@ public class CompanyDaoTestSuite {
         //CleanUp
         try {
             companyDao.delete(softwareMachineId);
-            companyDao.delete(dataMaestersId);
-            companyDao.delete(greyMatterId);
+            //companyDao.delete(dataMaestersId);
+            //companyDao.delete(greyMatterId);
             companyDao.delete(greyDoesMatterId);
-            companyDao.delete(grewBrewId);
+            //companyDao.delete(grewBrewId);
 
         } catch (Exception e) {
-            //do nothing
+            throw new RuntimeException(e);
         }
     }
 
