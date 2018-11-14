@@ -10,8 +10,6 @@ public class FacebookTestingApp {
 
     public static final String XPATH_INPUT_NAME = "//div[contains(@class, \"uiStickyPlaceholderInput\")]/input";
     public static final String XPATH_INPUT_LASTNAME = "//div[contains(@class, \"uiStickyPlaceholderInput\")]/input[contains(@name, \"lastname\")]";
-
-    //public static final String XPATH_SELECT_DAY = "//span[contains(@class, \"_5k_4\")]/select[1]";
     public static final String XPATH_SELECT_DAY = "//select[contains(@name, \"birthday_day\")]";
     public static final String XPATH_SELECT_MONTH = "//select[contains(@name, \"birthday_month\")]";
     public static final String XPATH_SELECT_YEAR = "//select[contains(@name, \"birthday_year\")]";
@@ -20,10 +18,6 @@ public class FacebookTestingApp {
 
         WebDriver driver = WebDriverConfig.getDriver(WebDriverConfig.CHROME);
         driver.get("https://www.facebook.com/");
-
-
-
-        //while (!driver.findElement(By.xpath(XPATH_SELECT)).isDisplayed());
 
         WebElement inputFirstname = driver.findElement(By.xpath(XPATH_INPUT_NAME));
         inputFirstname.sendKeys("Maria");
